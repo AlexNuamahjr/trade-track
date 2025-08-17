@@ -1,0 +1,13 @@
+{
+  "name": "trade-track",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/AlexNuamahjr/trade-track.git",
+  "author": "AlexNuamahjr <alexandernuamah@gmail.com>",
+  "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
