@@ -1,6 +1,6 @@
 # Trade-Track – Inventory & POS System
 
-- Inventra is a multi-store inventory and point-of-sale (POS) system built with modern technologies. It helps businesses efficiently manage stock, sales, and reporting across multiple store branches.
+- Trade-Track is a multi-store inventory and point-of-sale (POS) system built with modern technologies. It helps businesses efficiently manage stock, sales, and reporting across multiple store branches.
 - This project is organized as a Yarn monorepo with separate apps and shared packages.
 
 ## 🚀 Features
