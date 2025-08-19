@@ -29,6 +29,7 @@ model User {
   role      Role    @default(CASHIER)
   storeId   String? @db.Uuid
   store     Store?   @relation(fields: [storeId], references: [id])
+  mustResetPassword Boolean @default(true)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -47,4 +48,7 @@ model Store {
   users     User[]
   
   @@map("stores")
+
+  @@index([location])
+  @@index([name])
 }
