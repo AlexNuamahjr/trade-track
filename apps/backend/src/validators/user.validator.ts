@@ -1,11 +1,11 @@
 import z from "zod";
 
-export const UserValidator = z.object({
+export const userValidationSchema = z.object({
   email: z.email("Invalid email format").max(255),
-  name: z.string().min(4).max(255),
-  password: z.string().min(8).max(255),
-  role: z.enum(["CASHIER", "MANAGER", "ADMIN"]),
+  name: z.string("email is required").min(4).max(255),
+  role: z.enum(["CASHIER", "MANAGER", "ADMIN"]).default("CASHIER"),
   storeId: z.string().optional(),
+  temporaryPassword: z.string().min(6)
 });
 
-export type CreateUserInput = z.infer<typeof UserValidator>;
+export type CreateUserInput = z.infer<typeof userValidationSchema>;
