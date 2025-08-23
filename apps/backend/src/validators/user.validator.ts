@@ -5,7 +5,6 @@ export const userValidationSchema = z.object({
   name: z.string("email is required").min(4).max(255),
   role: z.enum(["CASHIER", "MANAGER", "ADMIN"]).default("CASHIER"),
   storeId: z.string().optional(),
-  temporaryPassword: z.string().min(6)
 });
 
 export type CreateUserInput = z.infer<typeof userValidationSchema>;
